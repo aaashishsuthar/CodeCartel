@@ -1,0 +1,86 @@
+[
+  {
+    "name": "opencity_ls17_mpwise",
+    "filename": "opencity_ls17_mpwise.csv",
+    "publisher": "Open City (Oorvani Foundation), Public Domain",
+    "original_source": "MoSPI eSAKSHI Portal (17th Lok Sabha Expenditure & Sanctions Report)",
+    "url": "https://data.opencity.in/dataset/0844e65b-76ff-422b-a213-2495aec592d9/resource/e4524ed7-6c9b-41a5-ad0a-003358fdabca/download/4d2bc892-cd12-4f17-befa-aa7efb6e210b.csv",
+    "retrieved_at": "2026-09-20 04:25:10 UTC",
+    "rows": 557,
+    "size_kb": 47.7,
+    "sha256": "a14011eae26dc1c60d4a16ddb092af5e0735ed915368b6afe8fdae084da9bb28",
+    "status": "VERIFIED & ONLINE"
+  },
+  {
+    "name": "opencity_ls16_mpwise",
+    "filename": "opencity_ls16_mpwise.csv",
+    "publisher": "Open City (Oorvani Foundation), Public Domain",
+    "original_source": "MoSPI eSAKSHI Portal (16th Lok Sabha Pending Release & Unspent Balance Report)",
+    "url": "https://data.opencity.in/dataset/0844e65b-76ff-422b-a213-2495aec592d9/resource/57baaa96-04ca-4328-86bc-17b455af1024/download/d6a40c40-f0bb-44d7-b697-fd4d74ffefd3.csv",
+    "retrieved_at": "2026-09-20 04:25:10 UTC",
+    "rows": 572,
+    "size_kb": 81.9,
+    "sha256": "75af7fc192aab5fe1a498408e6a471f77062429992d3e3d78047b57de603c8e0",
+    "status": "VERIFIED & ONLINE"
+  },
+  {
+    "name": "opencity_ls15_mpwise",
+    "filename": "opencity_ls15_mpwise.csv",
+    "publisher": "Open City (Oorvani Foundation), Public Domain",
+    "original_source": "MoSPI eSAKSHI Portal (15th Lok Sabha Cumulative Release & Expenditure Report)",
+    "url": "https://data.opencity.in/dataset/0844e65b-76ff-422b-a213-2495aec592d9/resource/0b894524-3708-41ec-896e-7a5e8d15c2f3/download/cfa8c46b-1bb0-4d8a-b149-2d1d53ad0826.csv",
+    "retrieved_at": "2026-09-20 04:25:11 UTC",
+    "rows": 552,
+    "size_kb": 75.9,
+    "sha256": "45ee72a31ec90a10a21b1c11dd02f9c80c6119876af4cbc19a8ae6132a91c7f5",
+    "status": "VERIFIED & ONLINE"
+  },
+  {
+    "name": "empowered_indian_mps",
+    "filename": "empowered_indian_mps.json",
+    "publisher": "Empowered Indian Open Works API",
+    "original_source": "Live Open API for Parliamentary Works Ingestion",
+    "url": "https://api.empoweredindian.in/api/summary/mps",
+    "retrieved_at": "2026-09-20 04:25:13 UTC",
+    "rows": 5,
+    "size_kb": 13.8,
+    "sha256": "c2c1cc1ce23eadb1d238305424848941fd5cb3e6b1dd877bf9fab2ec04543f55",
+    "status": "VERIFIED & ONLINE"
+  },
+  {
+    "name": "esakshi_prelogin_dashboard",
+    "filename": "mplads_ceilings.csv",
+    "publisher": "Ministry of Statistics and Programme Implementation (MoSPI)",
+    "original_source": "Official MoSPI eSAKSHI Public Data Feed",
+    "url": "https://mplads.mospi.gov.in/digigov/dashboard.html",
+    "retrieved_at": "2026-09-20 04:25:14 UTC",
+    "rows": 587,
+    "size_kb": 23.1,
+    "sha256": "50e749ccedb62bebcf3d6304008081558c9318920f073676556a9b5cda8ac9b6",
+    "status": "VERIFIED & ONLINE"
+  },
+  {
+    "name": "sih_allocated_limits_pdf",
+    "filename": "Allocated_Limit_for_Honble_MPs.pdf",
+    "publisher": "Ministry of Parliamentary Affairs / MoSPI",
+    "original_source": "Allocated Limit for Hon'ble MPs Official Ceiling Document (542 MPs, Rs 8,341.87 Cr)",
+    "url": "Official SIH Problem Statement 26102 Portal",
+    "retrieved_at": "2026-09-20 04:25:14 UTC",
+    "rows": 542,
+    "size_kb": 97.5,
+    "sha256": "b1c0b65a94617b48535ba4764006049573dce2e8766e1bbcc821e7ebde000fc4",
+    "status": "VERIFIED & ONLINE"
+  },
+  {
+    "name": "lgd_directory_mopr",
+    "filename": "mplad_ceilings.csv",
+    "publisher": "Ministry of Panchayati Raj (MoPR)",
+    "original_source": "Official Local Government Directory (788 Districts Standardized)",
+    "url": "https://lgdirectory.gov.in",
+    "retrieved_at": "2026-09-20 04:25:14 UTC",
+    "rows": 543,
+    "size_kb": 30.7,
+    "sha256": "7af9fe5d7d59ac3cc1ade624c37374c7437eb89a9f3ee3dfe3e1b9b3322af978",
+    "status": "VERIFIED & ONLINE"
+  }
+]

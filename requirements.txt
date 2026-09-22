@@ -1,0 +1,15 @@
+streamlit>=1.35.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.4.0
+plotly>=5.20.0
+fpdf2>=2.7.9
+requests>=2.31.0
+sqlalchemy>=2.0.0
+apscheduler>=3.10.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+streamlit-agraph>=0.0.45
+python-pptx>=0.6.23

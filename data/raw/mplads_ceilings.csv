@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description"
+	content="The Members of Parliament Local Area Development Scheme (MPLADS) is a Central Sector Scheme fully funded by the Government of India and was launched on 23 December 1993.Its primary focus is on creating durable community assets and improving essential public services, including healthcare, sanitation, education, and drinking water infrastructure.">
+<meta name="keywords"
+	content="MPLADS, mplads, MPLADS e-SAKSHI, e-SAKSHI, Allocated Limit, MPLADS Development, MPLADS Scheme, Consituency Wise Data, Government Data, Indian Public Data, Citizen Dashboard, Public Spending, MP Profiles, MPLADS Dashboard">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="MPLADS">
+<meta property="og:description"
+	content="MPLADS, Allocated Limit, Consituency Wise Data, Government Data, Indian Public Data, Citizen Dashboard, Public Spending, MP Profiles, MPLADS Dashboard">
+
+<!-- Twitter -->
+<meta name="twitter:title" content="MPLADS">
+<meta name="twitter:description"
+	content="MPLADS, Allocated Limit, Consituency Wise Data, Government Data, Indian Public Data, Citizen Dashboard, Public Spending, MP Profiles, MPLADS Dashboard">
+<!-- NEW BILLBOARD -->
+<!-- 	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+ -->
+<!-- NEW BILLBOARD -->
+
+<link
+	href="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-1.13.6/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.css"
+	rel="stylesheet" />
+
+<!-- Font Awesome CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+<!-- PAGINATION -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<!--Loading D3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" />
+<link
+	href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+	rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" href="/style/css/dashboardcss.css" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+	rel="stylesheet">
+
+<title>MPLADS-Dashboard</title>
+</head>
+<body>
+	<header class="top-header">
+
+		<div class="font-resizer">
+			<button id="font-decrease" aria-label="Decrease font size">A-</button>
+			<span class="separator"></span>
+			<button id="font-default" aria-label="Default font size">A</button>
+			<span class="separator"></span>
+			<button id="font-increase" aria-label="Increase font size">A+</button>
+		</div>
+
+		<!-- <div class="lang-switch">
+			<span>EN</span> | <span>HI</span>
+		</div> -->
+	</header>
+
+	<nav-section class="" style="background: white"> <!-- MAIN NAV BAR -->
+	<nav class="navbar navbar-expand-lg navbar-light navcus d-flex mainnav">
+
+		<div class="logodiv">
+			<!-- <img src="/zkImages/mplads_logo_2023.jpg" class="mpladslogo"/> -->
+			<a href="#"><img src="/zkImages/Mplads.png" class="mainlogo"
+				style="filter: brightness(0) saturate(100%) invert(12%) sepia(54%) saturate(1325%) hue-rotate(176deg) brightness(92%) contrast(95%); width: auto; max-height: 54px;"
+				alt="MPLADS e-SAKSHI" /></a>
+		</div>
+
+		<div class="">
+			<!-- <a class="navbar-brand" href="#"><img src="/zkImages/mplads_logo_2023.jpg" class="mainlogo" ></a> -->
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- <div class="collapse navbar-collapse linkcus" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item bold">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./landingpage.html"
+                  target="_blank"
+                  ><object data="/zkImages/Home.svg"></object>&nbsp;Home</a
+                >
+              </li>
+              <li class="nav-item bold">
+		          <a class="nav-link active " aria-current="page" href="#">CONTACT US</a>
+		        </li>
+              <li class="nav-item bold">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  style="color: rgb(26, 147, 111)"
+                  ><object id="dash" data="/zkImages/Dashboard.svg"></object
+                  >&nbsp;Dashboard</a
+                >
+              </li>
+              <li class="nav-item bold">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/digigov/Login.zul"
+                  target="_blank"
+                >
+                  <button class="but1">Login</button>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+
+			<div class="collapse navbar-collapse linkcus" id="navbarNav">
+				<ul class="navbar-nav ">
+					<li class="nav-item bold"><a class="nav-link active  "
+						aria-current="page" href="./landingpage.html">Home</a></li>
+					<span class="separator"></span>
+					<li class="nav-item bold"><a class="nav-link"
+						aria-current="page" href="#">Dashboard</a></li>
+				</ul>
+			</div>
+		</div>
+		<a class="nav-link active" aria-current="page"
+			href="/digigov/Login.zul" target="_blank">
+			<button class="but1">LOGIN</button>
+		</a>
+
+	</nav>
+
+	<!-- MAIN NAV BAR --> <!-- SUB NAV BAR --> <!-- <nav
+        class="navbar navbar-expand-lg navbar-light bg-light subnav show">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse centered" id="subNavBarNav">
+            <ul class="navbar-nav" style="width: 40%">
+              <li id="lok" class="nav-item loksabha centered s-left">
+                <a class="nav-link" href="#">Lok Sabha</a>
+              </li>
+              <li
+                id="rajya"
+                class="nav-item rajyasabha centered s-right deactive"
+              >
+                <a class="nav-link" href="#">Rajya Sabha</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> --> </nav-section>
+
+	<!-- Privacy Policy Modal -->
+	<div class="modal fade privacy-policy-modal" id="privacyPolicyModal"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close privacy-close"
+						data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h3 style="font-size: 1.42vw; padding: 0 1vw">What you need to
+						know about the process of works recommendation, sanction and
+						completion and fund utilization under MPLADS on the eSAKSHI Portal
+					</h3>
+					<ul>
+						<li>The MPLADS–eSAKSHI web portal <a
+							href="www.mplads.mospi.gov.in">(www.mplads.mospi.gov.in)</a> was
+							introduced with effect from 1 April 2023 to manage the revised
+							fund-flow procedure under the MPLADS Scheme. With the launch of
+							the eSAKSHI portal, the annual entitlement of Hon’ble Members of
+							Parliament (MPs) is made available through online authorisations
+							at the beginning of each financial year or tenure
+						</li>
+						<li>Prior to 1 April 2023, the Scheme was being implemented
+							in a physical mode and the information regarding works
+							recommended and sanctioned District -wise were being maintained
+							by the concerned District Authorities. The expenditure against
+							these works were also made through physical bank accounts
+							maintained by the respective Districts for the purpose. <b>The
+								information regarding number of works recommended and sanctioned
+								and their respective amounts in respect of the 17th Lok Sabha is
+								available on the eSAKSHI portal for the year 2023-24 and not
+								available for the first four years viz. 2019-20, 2020-21,
+								2021-22 and 2022-23. Similarly, the details of works recommended
+								and sanctioned in respect of Rajya Sabha MPs is not available on
+								eSAKSHI Portal prior to the year 2023-24.</b>
+						</li>
+						<li>The portal provides login credentials to all stakeholders
+							of the Scheme, including Hon’ble MPs, the Central Nodal Agency
+							(MoSPI), State Nodal Authorities (SNAs), District Authorities
+							(NDAs and IDAs), and Implementing Agencies (IAs). Hon’ble MPs use
+							the portal to recommend eligible developmental works in their
+							constituencies and earmark funds from their annual entitlement. <b>For
+								Hon’ble MPs, the total amount recommended on the portal
+								indicates the utilisation of the allocated amounts to them under
+								the Scheme.</b>
+						</li>
+						<li>The responsibility for sanctioning and executing the
+							recommended works rests with the District Authorities. After
+							conducting the necessary feasibility checks, the District
+							Authorities sanction the works and designate the Implementing
+							Agencies responsible for execution. As per the Scheme guidelines,
+							sanctioned works are generally required to be completed within
+							one year of sanction.</li>
+						<li>Implementing Agencies raise vendor payment requests on
+							the portal at various stages of work execution, in accordance
+							with the sanction orders issued by the District Authorities. The
+							expenditure figures displayed on the dashboard represent the
+							total vendor payments released against completed/ongoing works.</li>
+						<li>Data on the eSAKSHI portal are updated in real time based
+							on inputs provided by different stakeholders through their
+							respective logins. Details of recommendations are updated when an
+							Hon’ble MP submits an online recommendation. The status of
+							sanction is updated upon sanction of the work by the District
+							Authority. Progress at different stages of sanctioned works is
+							updated based on entries made by the concerned Implementing
+							Agencies.</li>
+						<li>Upon release of the final payment, Implementing Agencies
+							are required to “mark the work as complete” on the portal as the
+							final step. <b>Only those works that are marked as complete
+								by the Implementing Agencies are reflected as completed works on
+								the public dashboard. </b>The District Authorities are continuously
+							pursued to ensure compliance by the Implementing Agencies to mark
+							the projects as completed following requisite formalities.
+						</li>
+						<li>The eSAKSHI portal also provides for uploading images of
+							assets and relevant documents at each stage of payment
+							processing. Accordingly, <b>Implementing Agencies upload
+								photographs of assets at different stages of completion, along
+								with documents such as sanction orders.</b>
+						</li>
+						<li><b>Implementing Agencies upload photographs of assets
+								at different stages of completion, along with documents such as
+								sanction orders. </b>so as to enable correct interpretation and
+							understanding by the public/ stakeholders.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Privacy Policy Modal -->
+
+	<tile-section>
+
+	<div class="dboardtitlesection">
+		<div class="textsection">
+			<h2 class="dboardtitle">Dashboard</h2>
+			<h3>
+				<label id="titletag" class="dboarddetails"></label>
+			</h3>
+			<!-- <label class="dboardcontent"
+		            >eSAKSHI Portal displays data of works recommended online by Hon'ble
+		            Members of Parliament on and after 1st April 2023.
+		         </label> -->
+		</div>
+		<div class="searchtab">
+			<div id="mydrop" class=""
+				style="display: flex; justify-content: space-evenly;">
+				<!-- <input class="form-control me-2 searchbar" type="search" placeholder="Search" aria-label="Search"> -->
+				<div class="searchbar">
+					<div class="search-child-div"></div>
+					<i id="searchicon" class="fa fa-search"
+						style="align-items: center; width: auto; margin-right: 10%;"></i>
+				</div>
+				<div class="dropdown-toggle centered filter" type="button"
+					id="dropdownMenuButton1" data-bs-toggle="dropdown"
+					data-bs-auto-close="outside" aria-expanded="false">
+					<div id="fil-img"></div>
+					<!-- <label>Filter</label> -->
+				</div>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<!-- <a class="dropdown-item" href="#">Action</a>
+						    <a class="dropdown-item" href="#">Another action</a>
+						    <a class="dropdown-item" href="#">Something else here</a> -->
+					<div class="drop-down-search">
+						<ul>
+							<li id="ten"><label for="Tenure">Tenure</label><br /> <select
+								id="tenure" name="tenure" class="sel" style="padding: 2vh"></select>
+							</li>
+							<li><label for="states">State </label><br /> <select
+								name="States" id="demo" class="sel"></select></li>
+							<li id="const"><label for="constituency">Constituency</label><br />
+								<select id="constituency" name="Constituency" class="sel"></select>
+							</li>
+							<li><label for="MPname">MP Name</label><br /> <select
+								id="MpName" name="MPnames" class="sel"></select></li>
+
+							<li>
+								<div id="search_btn">
+									<button type="button" class="btn btn-warning"
+										style="margin-left: -20px" id="reset">Reset</button>
+									<button type="button" class="btn btn-success" id="searchFilter">
+										Search</button>
+									<!-- 	<input type="Submit" value ="Reset" name="search" style="margin-left:-40px;" class="filterbutton" id="reset">
+												<input type="Submit" value ="Search" name="search" class="filterbutton" id="searchFilter"> -->
+									<script>
+										$("#reset").click(function() {
+											location.reload();
+										});
+									</script>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div>
+					<button id="lok" class="sabhabutton">Lok Sabha</button>
+					<button id="rajya" class="sabhabutton deactive">Rajya
+						Sabha</button>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<marquee direction="left">
+		<label class="dboardcontent">eSAKSHI Portal displays data of
+			works recommended online by Hon'ble Members of Parliament on and
+			after 1st April 2023. </label>
+
+	</marquee>
+
+	</div>
+	<!-- <div class="centered" style="height: 7vh; align-items: center">
+        <marquee direction="left">
+          
+        </marquee>
+      </div> -->
+	<div class="rep-card-container">
+
+		<div class="report-container">
+
+			<div class="title">Title</div>
+
+			<div class="dbchart-container">
+				<svg width="397" height="397" viewBox="0 0 397 397">
+  
+			  Background circle
+			  <circle cx="198.5" cy="198.5" r="140" fill="none" stroke="#e0e0e0"
+						stroke-width="25" />
+			
+			 			
+			  Segment 1 (Recommended)
+			  <circle cx="198.5" cy="198.5" r="140" fill="none" stroke="#2ec7c9"
+						stroke-width="25" stroke-linecap="round" id="seg1" />
+			
+			  Segment 2 (Sanctioned)
+			  <circle cx="198.5" cy="198.5" r="140" fill="none" stroke="#2f86eb"
+						stroke-width="25" stroke-linecap="round" id="seg2" />
+			
+			  Segment 3 (Completed)
+			  <circle cx="198.5" cy="198.5" r="140" fill="none" stroke="#0d2b45"
+						stroke-width="25" stroke-linecap="round" id="seg3" />
+						
+			</svg>
+
+				<div class="center-text">Works</div>
+			</div>
+
+			<div class="legend">
+				<div class="legend-item">
+					<span class="dot" style="background: #2ec7c9;"></span>
+					<div class="legend-content">
+						Works Recommended<br> <b class="legend-content-bold">3,3123
+							Cr</b>
+					</div>
+				</div>
+
+				<div class="legend-item">
+					<span class="dot" style="background: #2f86eb;"></span>
+					<div class="legend-content">
+						Works Sanctioned<br> <b class="legend-content-bold">4,466.38
+							Cr</b>
+					</div>
+				</div>
+
+				<div class="legend-item">
+					<span class="dot" style="background: #0d2b45;"></span>
+					<div class="legend-content">
+						Works Completed<br> <b class="legend-content-bold">859.40
+							Cr</b>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- <div class="cards-container">
+
+			<div id="fra" class="Dashboard-tile fr"></div>
+
+			<div id="tcc" class="Dashboard-tile tc"></div>
+
+			<div id="tra" class="Dashboard-tile twr"></div>
+
+			<div id="tsw" class="Dashboard-tile te"></div>
+
+			<div id="tca" class="Dashboard-tile twc"></div>
+
+			<div id="tea" class="Dashboard-tile te"></div>
+
+			<script type="module" src="/libs/simplegrid/preLoginDashboard.js"></script>
+		</div> -->
+
+		<div class="row cards-container gy-2">
+			<div class="col-md-2 col-4">
+				<div id="fra" class="Dashboard-tile fr"></div>
+			</div>
+			<div class="col-md-2 col-4">
+				<div id="tcc" class="Dashboard-tile tc"></div>
+			</div>
+			<div class="col-md-2 col-4">
+				<div id="tra" class="Dashboard-tile twr"></div>
+			</div>
+			<div class="col-md-2 col-4">
+				<div id="tsw" class="Dashboard-tile te"></div>
+			</div>
+			<div class="col-md-2 col-4">
+				<div id="tca" class="Dashboard-tile twc"></div>
+			</div>
+			<div class="col-md-2 col-4">
+				<div id="tea" class="Dashboard-tile te"></div>
+			</div>
+
+			<script type="module" src="/libs/simplegrid/preLoginDashboard.js"></script>
+		</div>
+
+
+	</div>
+
+	<div class="table-section my-1">
+		<div id="spin" class="text-center">
+			<div class="spinner-border text-success"
+				style="height: 70px; width: 70px; font-size: 30" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+		<div class="tablebody">
+			<div class="tabletitle" id="gridtitle">
+				<!-- <p>Works Sanctioned</p> -->
+			</div>
+			<table id="tablepag"
+				class="table table-light nowrap responsive table-striped tablecus">
+				<thead class="sticky-top head"></thead>
+				<tbody class="tail"></tbody>
+				<tfoot class="sticky-bottom"></tfoot>
+			</table>
+			<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+			<script
+				src="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-1.13.6/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.js"></script>
+			<script
+				src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+			<script type="module" src="../WebContent/libs/simplegrid/poptable.js"></script>
+		</div>
+	</div>
+	</tile-section>
+
+	<!-- For Image Pop up -->
+	<div class="modal fade" id="image_pop" data-bs-backdrop="static"
+		data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Attachments</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- For Image Pop up -->
+
+	<!-- For Review rating by work -->
+	<div class="modal fade" id="wrk-revrate-modal"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Reviews And
+						Rating</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="footer-top">
+
+			<div class="contact-info">
+				<div>
+					<strong>Contact us:&nbsp;</strong>
+					<div>
+						Landline no: 011-2345602, 011-23455607<br> Email id:
+						cna-mplads@mospi.gov.in
+					</div>
+				</div>
+			</div>
+			<div class="socialicon">
+				<div>
+					<img id="playStoreIcon"
+						style="height: 39px; cursor: pointer; margin-top: 20px;"
+						src="/zkImages/play-store.png" onclick="callApi('playstore')"
+						alt="MPLADS e-SAKSHI App"> <img id="appStoreIcon"
+						style="height: 40px; margin-top: 18px; cursor: pointer;"
+						src="/zkImages/app-store.png" onclick="callApi('appstore')"
+						alt="MPLADS e-SAKSHI App">
+				</div>
+			</div>
+		</div>
+
+		<div class="footercus">
+			<p>© Content Owned by Ministry of Statistics and Programme
+				Implementation Government of India | Site Maintained by Tata
+				Consultancy Services Ltd.&nbsp;</p>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<script type="module" src="/libs/simplegrid/loksaba.js"></script>
+	<script type="module" src="/libs/simplegrid/rajyasaba.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</body>
+
+<!-- jQuery -->
+<!-- Data Table JS -->
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!-- NEW -->
+
+<!-- OLD -->
+<script
+	src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script
+	src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+
+<!--  OLD -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+<!-- additionals buttons -->
+<script type="text/javascript" language="javascript"
+	src="https://cdn.datatables.net/buttons/1.4.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.flash.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.html5.min.js"></script>
+<script type="text/javascript" language="javascript"
+	src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.print.min.js"></script>
+<!-- PAGINATION JQUERY -->
+</html>

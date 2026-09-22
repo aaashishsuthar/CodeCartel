@@ -1,0 +1,12 @@
+{
+  "accuracy": 0.953,
+  "precision": 0.723,
+  "recall": 0.935,
+  "f1": 0.815,
+  "test_size": 831,
+  "positive_rate": 0.111,
+  "tn": 706,
+  "fp": 33,
+  "fn": 6,
+  "tp": 86
+}
